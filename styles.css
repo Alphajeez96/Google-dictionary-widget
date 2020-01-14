@@ -39,7 +39,8 @@ i {
       width: 10vw;
     }
     i{
-      text-align: center;
+      /* text-align: center; */
+      margin-right: 10px;
     }
   }
   
