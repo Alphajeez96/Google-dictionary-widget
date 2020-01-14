@@ -9,7 +9,6 @@
 }
 .btn{
   position: absolute  ;
-
 }
 i {
   width:2vw;
@@ -31,6 +30,14 @@ i {
   button {
     font-size: 1.5em;
     color: gray;
+  }
+  @media screen and (max-width: 768px){
+    input {
+      width: 20vw;
+    }
+    button{
+      width: 4vw;
+    }
   }
   
   .syllables {
