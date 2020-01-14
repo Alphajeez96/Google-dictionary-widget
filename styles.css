@@ -33,10 +33,10 @@ i {
   }
   @media screen and (max-width: 768px){
     input {
-      width: 20vw;
+      width: 40vw;
     }
     button{
-      width: 4vw;
+      width: 8avw;
     }
   }
   
