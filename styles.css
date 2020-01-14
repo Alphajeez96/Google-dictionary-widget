@@ -1,0 +1,74 @@
+#app {
+  min-width: 50vw;
+  max-width: 600px;
+  margin: 2em auto;
+  font-family: sans-serif;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  padding: 1em;
+}
+  
+  h3 {
+    font-weight: normal;
+    /* font-size: 2em; */
+    line-height: 1;
+    margin-top: 1em;
+    color:#545454
+  }
+  
+  input, button {
+    font-size: 1.5em;
+    color: gray;
+  }
+  
+  .syllables {
+    font-size: 2em;
+    margin: 0;
+    line-height: 1;
+  }
+  
+  .pronunciation {
+    color: gray;
+  }
+  
+  .synonym-heading {
+    font-style: italic;
+  }
+    
+  .synonym-heading::after {
+      content: ":"
+    }
+    ::placeholder{
+      font-size: 16px;
+    }
+  
+  
+  /* .synonym {
+    &:not(:last-child)::after {
+      content: ", ";
+    }
+  } */
+  
+  .synonym-heading,
+  .synonym {
+    color: gray;
+    margin: 0;
+    display: inline;
+  }
+  
+  .part-of-speech {
+    font-style: italic;
+  }
+  
+  .definition-group {
+    margin-bottom: 1em;
+  }
+  
+  .definition-item {
+    margin: 0;
+  }
+  
+  .example {
+    color: gray;
+  }
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dictionary</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <h3>Dictionary</h3>
+        <input type="text" v-model="word" placeholder=" Search for a word" />
+        <button @click="findWord">Look-up</button>
+        <dl v-if="response">
+          <dt>
+            <p class="syllables">{{syllables}}</p>
+            <p class="pronunciation">{{pronunciation}}</p>
+          </dt>
+          <dd v-if="nouns.length">
+            <p class="part-of-speech">noun</p>
+            <ol>
+              <li class="definition-group" v-for="noun in nouns">
+                <p>{{noun.definition}}</p>
+                <p v-for="example in noun.examples">
+                  <q class="example">{{example}}</q>
+                </p>
+                <dl>
+                  <dt class="synonym-heading">synonyms</dt>
+                  <dd class="synonym" v-for="synonym in noun.synonyms">
+                    {{synonym}}
+                  </dd>
+                </dl>
+              </li>
+            </ol>
+          </dd>
+          <dd v-if="verbs.length">
+            <p class="part-of-speech">verb</p>
+            <ol>
+              <li class="definition-group" v-for="verb in verbs">
+                <p>{{verb.definition}}</p>
+                <p v-for="example in verb.examples">
+                  <q class="example">{{example}}</q>
+                </p>
+                <dl>
+                  <dt class="synonym-heading">synonyms</dt>
+                  <dd class="synonym" v-for="synonym in verb.synonyms">
+                    {{synonym}}
+                  </dd>
+                </dl>
+              </li>
+            </ol>
+          </dd>
+        </dl>
+      </div>
+    <script src='app.js'></script>
+</body>
+</html>
