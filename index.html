@@ -6,13 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dictionary</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id="app">
         <h3>Dictionary</h3>
         <input type="text" v-model="word" placeholder=" Search for a word" />
-        <button @click="findWord">Look-up</button>
+        <button @click="findWord" class="btn"> <i class="fa fa-search"></i></button>
+
         <dl v-if="response">
           <dt>
             <p class="syllables">{{syllables}}</p>
