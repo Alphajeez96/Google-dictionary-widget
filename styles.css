@@ -22,7 +22,13 @@ i {
     color:#545454
   }
   
-  input, button {
+  input{
+    font-size: 1.5em;
+    color: gray;
+    width: 40vw;
+  }
+  
+  button {
     font-size: 1.5em;
     color: gray;
   }
